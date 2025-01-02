@@ -19,11 +19,11 @@ function Post() {
           navigate("/login");
         } else {
           // Fetch data
-          axios.get(`http://localhost:3002/posts/get/${id}`).then((res) => {
+          axios.get(`https://fullstack-server-side.onrender.com/posts/get/${id}`).then((res) => {
             setPost(res.data);
           });
       
-          axios.get(`http://localhost:3002/comments/get/${id}`).then((res) => {
+          axios.get(`https://fullstack-server-side.onrender.com/comments/get/${id}`).then((res) => {
             setComments(res.data);
           });
         }
@@ -32,7 +32,7 @@ function Post() {
     const onSubmit = () => {
         axios
             .post(
-                "http://localhost:3002/comments/add",
+                "https://fullstack-server-side.onrender.com/comments/add",
                 {
                     comment: commentText,
                     postId: id,
@@ -75,7 +75,7 @@ function Post() {
         setComments(updatedComments); // Update state immediately
 
         axios
-            .delete(`http://localhost:3002/comments/del/${commentId}`, {
+            .delete(`https://fullstack-server-side.onrender.com/comments/del/${commentId}`, {
                 headers: {
                     token: localStorage.getItem("token"),
                 },
@@ -100,7 +100,7 @@ function Post() {
             let newTitle = prompt("Enter a new Title");
             axios
                 .put(
-                    "http://localhost:3002/posts/title",
+                    "https://fullstack-server-side.onrender.com/posts/title",
                     { title: newTitle, id: id },
                     {
                         headers: {
@@ -124,7 +124,7 @@ function Post() {
             let newPost = prompt("Enter a new Post");
             axios
                 .put(
-                    "http://localhost:3002/posts/text",
+                    "https://fullstack-server-side.onrender.com/posts/text",
                     { content: newPost, id: id },
                     {
                         headers: {

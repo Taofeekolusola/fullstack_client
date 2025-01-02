@@ -9,7 +9,7 @@ function ChangePassword() {
   const changePassword = async () => {
     try {
       const res = await axios.put(
-        'http://localhost:3002/users/update',
+        'https://fullstack-server-side.onrender.com/users/update',
         { oldPassword, newPassword },
         {
           headers: {

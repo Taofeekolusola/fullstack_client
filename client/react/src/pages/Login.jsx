@@ -14,7 +14,7 @@ function Login() {
         e.preventDefault();
         const data = { username, password };
         axios
-            .post('http://localhost:3002/users/login', data)
+            .post('https://fullstack-server-side.onrender.com/users/login', data)
             .then((response) => {
                 if (response.data.success) {
                     localStorage.setItem('token', response.data.token);

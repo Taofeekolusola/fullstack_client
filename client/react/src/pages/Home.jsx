@@ -19,10 +19,10 @@ function Home() {
     } else {
       const fetchPosts = async () => {
         try {
-          const { data: fetchedPosts } = await axios.get("http://localhost:3002/posts/get");
+          const { data: fetchedPosts } = await axios.get("https://fullstack-server-side.onrender.com/posts/get");
 
           const likeCountPromises = fetchedPosts.map((post) =>
-            axios.get(`http://localhost:3002/likes/${post._id}`, {
+            axios.get(`https://fullstack-server-side.onrender.com/likes/${post._id}`, {
               headers: { token: localStorage.getItem("token") },
             })
           );
@@ -35,7 +35,7 @@ function Home() {
           }));
           setPosts(updatedPosts);
 
-          const { data: likedPostsData } = await axios.get("http://localhost:3002/likes", {
+          const { data: likedPostsData } = await axios.get("https://fullstack-server-side.onrender.com/likes", {
             headers: { token: localStorage.getItem("token") },
           });
           setLikedPosts(likedPostsData.map((like) => like.postId));
@@ -54,7 +54,7 @@ function Home() {
       setPosts((prevPosts) => prevPosts.filter((post) => post._id !== postId));
 
       // Perform the API call
-      const response = await axios.delete(`http://localhost:3002/posts/del/${postId}`, {
+      const response = await axios.delete(`https://fullstack-server-side.onrender.com/posts/del/${postId}`, {
         headers: { token: localStorage.getItem("token") },
       });
 
@@ -73,7 +73,7 @@ function Home() {
   const likeAPost = async (postId) => {
     try {
       const response = await axios.post(
-        "http://localhost:3002/likes",
+        "https://fullstack-server-side.onrender.com/likes",
         { postId },
         {
           headers: { token: localStorage.getItem("token") },
@@ -90,7 +90,7 @@ function Home() {
       );
 
       // Refetch like count for the specific post and update state
-      const { data: likeCountData } = await axios.get(`http://localhost:3002/likes/${postId}`, {
+      const { data: likeCountData } = await axios.get(`https://fullstack-server-side.onrender.com/likes/${postId}`, {
         headers: { token: localStorage.getItem("token") },
       });
 

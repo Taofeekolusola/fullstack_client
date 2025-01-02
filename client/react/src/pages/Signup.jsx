@@ -19,7 +19,7 @@ function Signup() {
         password: Yup.string().min(4).max(20).required('password is required'),
     });
     const onSubmit = (data) => {
-        axios.post("http://localhost:3002/users/signup", data).then((res) => { 
+        axios.post("https://fullstack-server-side.onrender.com/users/signup", data).then((res) => { 
             setPosts(res.data);
           })
     }

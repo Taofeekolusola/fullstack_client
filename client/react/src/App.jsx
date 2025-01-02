@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3002/users/auth", {
+      .get("https://fullstack-server-side.onrender.com/users/auth", {
         headers: {
           token: localStorage.getItem("token"),
         },

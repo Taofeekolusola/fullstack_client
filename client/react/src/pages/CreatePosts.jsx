@@ -28,7 +28,7 @@ function CreatePosts() {
         };
 
         // Send post data to backend with userId
-        axios.post("http://localhost:3002/posts", postData, {
+        axios.post("https://fullstack-server-side.onrender.com/posts", postData, {
             headers: { token: localStorage.getItem("token") },
         }).then((res) => {
             navigate("/"); // Redirect to home after successful creation
