@@ -1,3 +1,4 @@
+/* Like button */
 .like {
     background: rgb(60, 60, 238);
     color: white;
@@ -8,13 +9,16 @@
     margin-left: 7.3%;
     height: 24px;
     margin-right: 2px;
-}
-.footer span {
+  }
+  
+  /* Footer span */
+  .footer span {
     float: left;
     color: white;
-}
-
-.delete1 {
+  }
+  
+  /* Delete button */
+  .delete1 {
     background: rgb(60, 60, 238);
     color: white;
     display: flex;
@@ -22,4 +26,28 @@
     flex-direction: row;
     margin-right: 20%;
     height: 22px;
-}
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media (max-width: 768px) {
+    /* Adjust the Like button */
+    .like {
+      margin-left: 5%; /* Adjust left margin */
+      margin-right: 5%; /* Increase right margin for more space */
+      height: 30px; /* Slightly larger height */
+      padding: 0 10px; /* Add some padding */
+    }
+  
+    /* Adjust Footer span */
+    .footer span {
+      font-size: 14px; /* Smaller text size */
+    }
+  
+    /* Adjust Delete button */
+    .delete1 {
+      margin-right: 10%; /* Reduce right margin */
+      height: 26px; /* Slightly larger height */
+      padding: 0 10px; /* Add some padding */
+    }
+  }
+  
