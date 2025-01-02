@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import './Home.css';
 import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
+import ThumbDownAlt from '@mui/icons-material/ThumbDownAlt';
 import { AuthContext } from './helpers/AuthContext';
 
 function Home() {
