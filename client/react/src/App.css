@@ -173,6 +173,7 @@ transform: translateY(0); /* Reset lift effect */
 
   nav {
     gap: 10px;
+    font-size: 14px;
   }
 
   nav a {
@@ -197,11 +198,12 @@ transform: translateY(0); /* Reset lift effect */
   }
 
   .container {
-    width: 150px;
+    width: 60%;
   }
 
   nav {
     gap: 5px;
+    font-size: 14px;
   }
 
   nav a {
