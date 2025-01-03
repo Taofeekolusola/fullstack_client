@@ -58,7 +58,7 @@ function App() {
               <>
                 <Link to="/createpost">Post</Link>
                   <Link to="/">Home</Link>
-                  <Link to="/changepassword">ChangePassword</Link>
+                  <Link to="/changepassword">Password</Link>
               </>
             )}
             {authState.status && (

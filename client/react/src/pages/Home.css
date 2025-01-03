@@ -32,9 +32,9 @@
   @media (max-width: 768px) {
     /* Adjust the Like button */
     .like {
-      margin-left: 5%; /* Adjust left margin */
-      margin-right: 5%; /* Increase right margin for more space */
-      height: 30px; /* Slightly larger height */
+      margin-left: 3px; /* Adjust left margin */
+      margin-right: 3px; /* Increase right margin for more space */
+      height: 25px; /* Slightly larger height */
       padding: 0 10px; /* Add some padding */
     }
   
@@ -45,9 +45,8 @@
   
     /* Adjust Delete button */
     .delete1 {
-      margin-right: 10%; /* Reduce right margin */
-      height: 26px; /* Slightly larger height */
+      margin-right: 2px; /* Reduce right margin */
+      height: 25px; /* Slightly larger height */
       padding: 0 10px; /* Add some padding */
     }
   }
-  
